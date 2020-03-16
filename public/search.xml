@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>网络复习1</title>
+    <url>/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/</url>
+    <content><![CDATA[<h1 id="TCP-IP协议体系结构"><a href="#TCP-IP协议体系结构" class="headerlink" title="TCP/IP协议体系结构"></a>TCP/IP协议体系结构</h1><table>
+<thead>
+<tr>
+<th align="center">应用层：SMTP、HTTP、FTP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>传输层：TCP、UDP</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>互连网络层：IP</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>网络接入层：物理网络</strong></td>
+</tr>
+</tbody></table>
+<h2 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h2><p><em>在建立TCP连接时，需要进行三次握手。假设现在主机A要与主机B进行连接发送数据</em></p>
+<blockquote>
+<p>第一次：主机A发送位码syn=1，随机产生req=x到主机B，主机B由syn=1知道A想要与自己建立连接。</p>
+<p>第二次：    主机B收到请求后，向A发送<strong>ack number=x+1(主机A 的seq+1)</strong>，<strong>ACK＝１</strong>，<strong>随机产生seq=y</strong>。</p>
+<p>第三次：A收到B的信息之后检查ack number是否正确，以及ACK是否为1，若都正确，主机A回复<strong>ack number=y+1(主机B的seq+1)</strong>，<strong>ACK=1</strong>,<strong>seq=x+1</strong>。主机B接收到之后检查ACK与ack number，若都正确，连接建立。</p>
+</blockquote>
+<h2 id="TCP四次挥手"><a href="#TCP四次挥手" class="headerlink" title="TCP四次挥手"></a>TCP四次挥手</h2><p><em>TCP连接要释放时，需要进行四次挥手</em></p>
+<blockquote>
+<p>主机A已经完成了信息的发送，现在要断开TCP连接。</p>
+<p>第一次：主机A发送终止标识位FIN与序列号seq=u，表明自己要与B断开连接，发送后进入终止等待态1；</p>
+<p>第二次：服务器收到A的信息，回复ACK=1，确认号ack=u+1,seq=v；同时将FIN信息传达给应用进程，等待应用进程回应，A接收到后进入终止等待态2；</p>
+<p>第三次：应用进程使服务器<strong>被动关闭</strong>，向主机A发送FIN信号，ACK=1，seq=w, ack=u+1,等待主机A的最后确认。</p>
+<p>第四次：A接收到后向服务器发送ACK=1，seq=u+1, ack=w+1,B 收到后关闭，同时A在等待2MSL时候也关闭。连接释放。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>TCP/IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java复习-Day1</title>
+    <url>/2020/03/15/Java%E5%A4%8D%E4%B9%A0-Day1/</url>
+    <content><![CDATA[<h1 id="String、StringBuffer、StringBuilder有什么区别？"><a href="#String、StringBuffer、StringBuilder有什么区别？" class="headerlink" title="String、StringBuffer、StringBuilder有什么区别？"></a>String、StringBuffer、StringBuilder有什么区别？</h1><p><strong>1、String类中使用final关键字修饰，即</strong><code>private final char value[]</code> ,<strong>所以String对象是不可变的。而Stringbuffer与StringBuilder没有被 final修饰，所以这两个对象的内容是可变的。</strong></p>
+<p><strong>2、String对象是常量，线程安全；而StringBuffer对方法加了同步锁，是线程安全的；而StringBuilder并没有加锁，所以是非线程安全的。</strong></p>
+<p><strong>3、由于String的不可变性，每次对一个String对象进行修改时，都会生成一个新的String对象，然后将指针指向这个新的对象，这会导致资源的浪费；而StringBuffer与StringBuilder是可变的，所以只会在当前的String对象上更改。后者比前者在性能上有10%-15%的提升但是却冒着线程不安全的风险</strong></p>
+<p><strong>4、综上，在操作少量数据的时候使用String，单线程操作字符缓冲区下的大量数据使用StringBuilder,多线程下使用StringBuffer</strong></p>
+<h1 id="与eauals"><a href="#与eauals" class="headerlink" title="==与eauals()"></a><code>==</code>与<code>eauals()</code></h1><p><strong><code>==</code>的作用是判断两个对象的地址是不是相等，当被判断的两个是基本数据类型时，它的作用是判断两者的值是不是相等</strong></p>
+<p><strong><code>equals()</code>的作用是判断两个对象是否相等。当类没有覆盖这个方法时，它等价于<code>==</code>，当覆盖时，用于比较两者的内容是否一致。String类中就重写了这个方法。</strong></p>
+<p><strong>例如：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        String a=<span class="keyword">new</span> String(<span class="string">"a"</span>);<span class="comment">//新建两个对象，内容相同</span></span><br><span class="line">        String b=<span class="keyword">new</span> String(<span class="string">"a"</span>);</span><br><span class="line">        String c=<span class="string">"ab"</span>;<span class="comment">//存放在常量池中</span></span><br><span class="line">        String d=<span class="string">"ab"</span>;<span class="comment">//在常量池中查找</span></span><br><span class="line">        <span class="keyword">if</span>(a==b)&#123;	  <span class="comment">//false，两个对象的地址不同</span></span><br><span class="line">            <span class="comment">//...</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(c==d)&#123;	  <span class="comment">//true,引用相同</span></span><br><span class="line">            <span class="comment">//...</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(a.equals(b))&#123; <span class="comment">//true,值相同</span></span><br><span class="line">            <span class="comment">//...</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="关于final关键字的用法"><a href="#关于final关键字的用法" class="headerlink" title="关于final关键字的用法"></a>关于final关键字的用法</h1><p><strong>1、当修饰基本数据类型的变量时，数值一旦初始化之后不能更改；如果修饰引用类型的变量，则该变量不能再被另一个对象引用。</strong></p>
+<p><strong>2、当修饰一个类时，该类不能被继承，类中所有的方法将会被指定为final方法</strong></p>
+<p><strong>3、使用final的原因：把方法锁定，防止其含义被修改；第二个 原因是效率，但是现在的Java版本不需要这种优化了。</strong></p>
+<h1 id="获取键盘输入的两种方式"><a href="#获取键盘输入的两种方式" class="headerlink" title="获取键盘输入的两种方式"></a>获取键盘输入的两种方式</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用Scanner</span></span><br><span class="line">Scanner input=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">String s=in.nextLine();</span><br><span class="line">input.close();</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用BufferedReader</span></span><br><span class="line">BufferedReader input1 = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">String x=input1.nextLine();</span><br></pre></td></tr></table></figure>
+
+<h1 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h1><p><strong>1、接口的方法默认是public 并且不能有实现，抽象类可以有非抽象方法。</strong></p>
+<p><strong>2、接口中的变量默认是final修饰，一个类可以有多个接口，但是只能有一个抽象类，并且接口的实现类必须要实现接口中所有的方法</strong></p>
+<p><strong>3、接口是对行为的抽象，抽象类是一种模板设计</strong></p>
+<h1 id="ArrayList与LinkedList的异同"><a href="#ArrayList与LinkedList的异同" class="headerlink" title="ArrayList与LinkedList的异同"></a>ArrayList与LinkedList的异同</h1><p><strong>两者都是Java中比较常用的容器，都是不同步的，都不能保证线程安全。ArrayList底层为object数组，LinkedList底层为双向链表（jdk1.6之前为循环链表，1.7之后取消了循环）。</strong></p>
+<p><strong>ArrayList插入时，默认将数据插入到末尾，时间复杂度为O(1),要在指定位置删除或插入时，复杂度为O(n-1) 。LinkedList在插入和删除时，都要从末尾，时间复杂度近似为O(1)。</strong></p>
+<p><strong>ArrayList支持随机访问，LinkedList不支持。ArrayList的空间浪费体现在数组的末尾会留有一定的空闲，LinkedList体现在每个节点需要的空间要更大（保存数据和前后节点）</strong></p>
+<h2 id="ArrayList与Vector"><a href="#ArrayList与Vector" class="headerlink" title="ArrayList与Vector"></a>ArrayList与Vector</h2><p><strong>Vector的方法是同步的，可以让多个线程安全地访问，但是一个线程访问时会耗费大量的时间在同步操作上。</strong></p>
+]]></content>
+      <categories>
+        <category>java基础</category>
+      </categories>
+  </entry>
+</search>
