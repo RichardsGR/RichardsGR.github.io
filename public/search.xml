@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java复习-集合</title>
+    <url>/2020/03/19/Java%E5%A4%8D%E4%B9%A0-Day2%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h1 id="Java集合"><a href="#Java集合" class="headerlink" title="Java集合"></a>Java集合</h1><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="E:\Date\MyBlog\MyBlog\public\img\img_0076.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p><strong>集合位于java.util包中，最常见的集合是List与Map。我们先看List</strong></p>
+<p>​    List中包含ArrayList、LinkedList与Vector。其中ArrayList与Vector底层是用数组实现的，LinkedList是双向链表实现的。三者的比较如下：</p>
+<p>1、性能。由于数组的特性，ArrayList在访问元素时直接按照数组下标进行，时间复杂度为O(1)；但是在插入和删除时，需要移动目的插入位置之后所有的元素，因此消耗较大；双向链表的LinkedList在插入和删除时需要的时间复杂度近似为O（1），但是在访问其中某一元素时无法进行直接定位。综上，ArrayList在随机读取时具有优势，LinkedList在插入和删除时有优势。</p>
+<p>2、线程安全性。 ArrayList与LinkedList都没有对方法进行同步，因此都是线程不安全的。在多个线程访问时不安全。而Vector是一个经过 线程同步后的ArrayList，因此可以保证线程安全，但是却损耗了一定的性能。</p>
+<p>3、扩容。当容器中的元素越来越多时，需要对容器进行扩容。ArrayList的容量是<strong>当前容量*1.5+1</strong>，Vector默认是<strong>扩展一倍容量</strong>，而LinkedList一般不用考虑容量不够的情况。</p>
+<p>4、set。set是无序，唯一的。包含HashSet,LinkedHashSet,TreeSet。HashSet的底层是哈希表i，其中的元素是无序唯一的，依赖的两个方法是<code>hashCode()</code>和<code>equals()</code>。LinkedHashSet的底层是链表和哈希表，由链表保证有序，哈希表保证唯一。TreeSet底层是红黑树。</p>
+<blockquote>
+<p>先调用hashcode()方法来判断哈希值是否相同，在调用equals()方法判断值是否相同。如果都为true，则证明两个元素相同。一个hashcode上可以方多个元素（同样哈希值的元素会在哈希桶中排成一列）。</p>
+</blockquote>
+<p>​    Map中包含HashMap,Hashtable、TreeMap。Map是键值对映射容器，key对应value。最常见的是HashMap与Hashtable。</p>
+<p>1、HashMap允许键和值是null（最多允许一个键为null,多个值为null），而Hash table不行。</p>
+<p>2、HashMap不是线程安全的，而Hash table是安全的。</p>
+<blockquote>
+<p><em>补充</em></p>
+</blockquote>
+<p>​    <strong>HashMap</strong>在Java7的实现中，使用的是数组+链表。整个HashMap在整体上是一个数组，而数组的每一个元素是一个单向链表，每一个节点为一个Entry实例，包含key,value,hash和next属性。Java8之后引入了红黑树，因为在之前，我们可以通过哈希值很快得定位数组下标，但是在链表中的查找的时间复杂度为O(n)，为了提高效率，将链表元素超过8 的链表转化为红黑树，在这上面寻找的时候时间复杂度可降至O(logN)。</p>
+<p>​    <strong>ConcurrentHashMap</strong>与HashMap是基本一样的，但是却具有了线程安全的特性，具体的实现是将HashMap的数组分割成若干个segment，segment通过继承ReentrantLock来进行加锁，保证了每个segment的安全性，也就保证了整个的安全性。segment的内部是一个小的HashMap。Java8之后同样加入了红黑树。</p>
+<p>常用的集合的实现会单独写一篇文章。</p>
+]]></content>
+      <categories>
+        <category>java基础</category>
+      </categories>
+      <tags>
+        <tag>集合</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网络复习1</title>
     <url>/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/</url>
     <content><![CDATA[<h1 id="TCP-IP协议体系结构"><a href="#TCP-IP协议体系结构" class="headerlink" title="TCP/IP协议体系结构"></a>TCP/IP协议体系结构</h1><table>
