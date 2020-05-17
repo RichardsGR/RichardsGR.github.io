@@ -14,22 +14,22 @@
     
     
     
-    <title>网络复习1 | 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！</title>
+    <title>leetcode每日一题-二叉树层序遍历 | 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="TCP/IP">
-    <meta name="description" content="TCP&#x2F;IP协议体系结构   应用层：SMTP、HTTP、FTP    传输层：TCP、UDP   互连网络层：IP   网络接入层：物理网络   TCP三次握手在建立TCP连接时，需要进行三次握手。假设现在主机A要与主机B进行连接发送数据  第一次：主机A发送位码syn=1，随机产生req=x到主机B，主机B由syn=1知道A想要与自己建立连接。 第二次：    主机B收到请求后，向A发送ack">
-<meta name="keywords" content="TCP&#x2F;IP">
+    <meta name="keywords" content="二叉树">
+    <meta name="description" content="题目介绍 二叉树的层序遍历： 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。  一、思路 使用广度优先算法，将二叉树逐层加入到答案的List中。 首先需要一个辅助队列，将根节点先加入到辅助队列中，在辅助队列不为空的情况下，先将其中的节点取出，并将取出的节点值保存到答案中，然后再将该节点的子节点加入队列。重复这个过程，就能得到答案。 二、代码 1234">
+<meta name="keywords" content="二叉树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络复习1">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;16&#x2F;%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01&#x2F;index.html">
+<meta property="og:title" content="leetcode每日一题-二叉树层序遍历">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;13&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86&#x2F;index.html">
 <meta property="og:site_name" content="欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！">
-<meta property="og:description" content="TCP&#x2F;IP协议体系结构   应用层：SMTP、HTTP、FTP    传输层：TCP、UDP   互连网络层：IP   网络接入层：物理网络   TCP三次握手在建立TCP连接时，需要进行三次握手。假设现在主机A要与主机B进行连接发送数据  第一次：主机A发送位码syn=1，随机产生req=x到主机B，主机B由syn=1知道A想要与自己建立连接。 第二次：    主机B收到请求后，向A发送ack">
+<meta property="og:description" content="题目介绍 二叉树的层序遍历： 给你一个二叉树，请你返回其按 层序遍历 得到的节点值。 （即逐层地，从左到右访问所有节点）。  一、思路 使用广度优先算法，将二叉树逐层加入到答案的List中。 首先需要一个辅助队列，将根节点先加入到辅助队列中，在辅助队列不为空的情况下，先将其中的节点取出，并将取出的节点值保存到答案中，然后再将该节点的子节点加入队列。重复这个过程，就能得到答案。 二、代码 1234">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-16T01:45:25.600Z">
+<meta property="og:updated_time" content="2020-05-13T01:55:51.443Z">
 <meta name="twitter:card" content="summary">
     
     <link rel="shortcut icon" href="/favicon.ico">
@@ -123,7 +123,7 @@
         <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">网络复习1</div>
+        <div class="flex-col header-title ellipsis">leetcode每日一题-二叉树层序遍历</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" target="_blank" rel="noopener" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,15 +145,13 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">网络复习1</h1>
+        <h1 class="title">leetcode每日一题-二叉树层序遍历</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-03-16T00:54:04.000Z" itemprop="datePublished" class="page-time">
-  2020-03-16
+                <time datetime="2020-05-13T01:36:46.000Z" itemprop="datePublished" class="page-time">
+  2020-05-13
 </time>
 
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li></ul>
 
             
         </h5>
@@ -167,25 +165,16 @@
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#TCP-IP协议体系结构"><span class="post-toc-number">1.</span> <span class="post-toc-text">TCP/IP协议体系结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TCP三次握手"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">TCP三次握手</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TCP四次挥手"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">TCP四次挥手</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
 
-
-<article id="title-网络复习1"
+<article id="title-leetcode每日一题-二叉树层序遍历"
   class="post-article article-type-title fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">网络复习1</h1>
+        <h1 class="post-card-title">leetcode每日一题-二叉树层序遍历</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-03-16 08:54:04" datetime="2020-03-16T00:54:04.000Z"  itemprop="datePublished">2020-03-16</time>
+            <time class="post-time" title="2020-05-13 09:36:46" datetime="2020-05-13T01:36:46.000Z"  itemprop="datePublished">2020-05-13</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></li></ul>
-
 
 
             
@@ -196,36 +185,17 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="TCP-IP协议体系结构"><a href="#TCP-IP协议体系结构" class="headerlink" title="TCP/IP协议体系结构"></a>TCP/IP协议体系结构</h1><table>
-<thead>
-<tr>
-<th align="center">应用层：SMTP、HTTP、FTP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>传输层：TCP、UDP</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>互连网络层：IP</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>网络接入层：物理网络</strong></td>
-</tr>
-</tbody></table>
-<h2 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h2><p><em>在建立TCP连接时，需要进行三次握手。假设现在主机A要与主机B进行连接发送数据</em></p>
-<blockquote>
-<p>第一次：主机A发送位码syn=1，随机产生req=x到主机B，主机B由syn=1知道A想要与自己建立连接。</p>
-<p>第二次：    主机B收到请求后，向A发送<strong>ack number=x+1(主机A 的seq+1)</strong>，<strong>ACK＝１</strong>，<strong>随机产生seq=y</strong>。</p>
-<p>第三次：A收到B的信息之后检查ack number是否正确，以及ACK是否为1，若都正确，主机A回复<strong>ack number=y+1(主机B的seq+1)</strong>，<strong>ACK=1</strong>,<strong>seq=x+1</strong>。主机B接收到之后检查ACK与ack number，若都正确，连接建立。</p>
+            <blockquote>
+<p>题目介绍</p>
+<p>二叉树的层序遍历：</p>
+<p>给你一个二叉树，请你返回其按 <strong>层序遍历</strong> 得到的节点值。 （即逐层地，从左到右访问所有节点）。</p>
 </blockquote>
-<h2 id="TCP四次挥手"><a href="#TCP四次挥手" class="headerlink" title="TCP四次挥手"></a>TCP四次挥手</h2><p><em>TCP连接要释放时，需要进行四次挥手</em></p>
-<blockquote>
-<p>主机A已经完成了信息的发送，现在要断开TCP连接。</p>
-<p>第一次：主机A发送终止标识位FIN与序列号seq=u，表明自己要与B断开连接，发送后进入终止等待态1；</p>
-<p>第二次：服务器收到A的信息，回复ACK=1，确认号ack=u+1,seq=v；同时将FIN信息传达给应用进程，等待应用进程回应，A接收到后进入终止等待态2；</p>
-<p>第三次：应用进程使服务器<strong>被动关闭</strong>，向主机A发送FIN信号，ACK=1，seq=w, ack=u+1,等待主机A的最后确认。</p>
-<p>第四次：A接收到后向服务器发送ACK=1，seq=u+1, ack=w+1,B 收到后关闭，同时A在等待2MSL时候也关闭。连接释放。</p>
-</blockquote>
+<p><strong>一、思路</strong></p>
+<p>使用广度优先算法，将二叉树逐层加入到答案的<code>List</code>中。</p>
+<p>首先需要一个辅助队列，将根节点先加入到辅助队列中，在辅助队列不为空的情况下，先将其中的节点取出，并将取出的节点值保存到答案中，然后再将该节点的子节点加入队列。重复这个过程，就能得到答案。</p>
+<p><strong>二、代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; levelOrder(TreeNode root)&#123;</span><br><span class="line">        <span class="comment">//假如根节点为空，返回</span></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">        LinkedList&lt;TreeNode&gt; q = <span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//根节点加入队列</span></span><br><span class="line">        q.add(root);</span><br><span class="line">        <span class="keyword">while</span>(q.size()&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> t = q.size();</span><br><span class="line">            <span class="comment">//每层的节点值</span></span><br><span class="line">            ArrayList&lt;Integer&gt; floor = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; t;i++)&#123;</span><br><span class="line">                TreeNode tn = q.remove();</span><br><span class="line">                floor.add(tn.val);</span><br><span class="line">                <span class="keyword">if</span>(tn.left != <span class="keyword">null</span>)&#123;</span><br><span class="line">                    q.add(tn.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(tn.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">                    q.add(tn.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            res.add(floor);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
         </div>
 
@@ -234,7 +204,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-03-16T01:45:25.600Z" itemprop="dateUpdated">2020-03-16 09:45:25</time>
+    Last updated: <time datetime="2020-05-13T01:55:51.443Z" itemprop="dateUpdated">2020-05-13 09:55:51</time>
 </span><br>
 
 
@@ -258,7 +228,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TCP-IP/" rel="tag">TCP/IP</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag">二叉树</a></li></ul>
 
 
             
@@ -268,7 +238,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/&title=《网络复习1》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&pic=http://yoursite.com/img/touxiang.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&title=《leetcode每日一题-二叉树层序遍历》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&pic=http://yoursite.com/img/touxiang.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -278,22 +248,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/&title=《网络复习1》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&title=《leetcode每日一题-二叉树层序遍历》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网络复习1》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《leetcode每日一题-二叉树层序遍历》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -316,18 +286,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/03/19/Java%E5%A4%8D%E4%B9%A0-Day2%E9%9B%86%E5%90%88/" id="post-prev" class="post-nav-link">
+      <a href="/2020/05/17/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%AF%BE%E7%A8%8B%E8%A1%A8/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Java复习-集合</h4>
+        <h4 class="title">leetcode每日一题-课程表</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/03/15/Java%E5%A4%8D%E4%B9%A0-Day1/" id="post-next" class="post-nav-link">
+      <a href="/2020/05/08/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E5%A4%A7%E6%AD%A3%E6%96%B9%E5%BD%A2/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Java复习-Day1</h4>
+        <h4 class="title">leetcode每日一题-最大正方形</h4>
       </a>
     </div>
   
@@ -434,7 +404,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/&title=《网络复习1》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&pic=http://yoursite.com/img/touxiang.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&title=《leetcode每日一题-二叉树层序遍历》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&pic=http://yoursite.com/img/touxiang.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -444,22 +414,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/&title=《网络复习1》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&title=《leetcode每日一题-二叉树层序遍历》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网络复习1》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《leetcode每日一题-二叉树层序遍历》 — 欢迎访问巩冉的空间！  ＼( ^▽^ )／ 喔嗨唷～！&url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -470,7 +440,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/03/16/%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A01/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/05/13/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%BA%8C%E5%8F%89%E6%A0%91%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/" alt="微信分享二维码">
 </div>
 
 
